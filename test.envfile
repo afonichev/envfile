@@ -1,0 +1,21 @@
+
+# local variable, available only inside the file
+KEY_1 = value
+
+# variable exported from file
+export KEY_2 = value
+
+# will force overload the value of an existing environment variable
+overload KEY_3 = value
+
+# using the value of other variables
+export KEY_4 = { KEY_1 } of another variable
+
+# escaping variables
+export KEY_5 = {{ KEY_1 }} of another variable
+
+# special characters
+export KEY_6 = Title:\n\t1. { KEY_1 }\n\t2. { KEY_2 }\n\t3. { KEY_3 }
+
+# escaping special characters
+export KEY_7 = Title:\\n\\t1. { KEY_1 }\\n\\t2. { KEY_2 }\\n\\t3. { KEY_3 }
